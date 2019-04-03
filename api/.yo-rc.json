@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.nunsys"
+    },
+    "jhipsterVersion": "5.8.2",
+    "applicationType": "monolith",
+    "baseName": "nav",
+    "packageName": "com.nunsys",
+    "packageFolder": "com/nunsys",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mssql",
+    "prodDatabaseType": "mssql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ODQwMzQyYzQ4MzBlZDNmZmJiZGVlYmM2OGQ3YjUxZDYyMmVlODYyYzM2NmIzNjIyOTJmNTUwYThlNWUwZmQxOTJhOTQ3NjNmYmFkYmM4NzliMDVjZmYxZDhlMTM3YWU1ODI2MWM0ZTkwOTRjOTNjOWU1YmNjOTBmYTUxOTI1MWI=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true
+  }
+}

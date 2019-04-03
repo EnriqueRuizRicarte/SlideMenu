@@ -1,0 +1,17 @@
+
+
+entity Area {
+	descripcion String required maxlength(100)
+}
+
+entity SubArea {
+	descripcion String required maxlength(100)
+}
+
+relationship OneToMany {
+	Area to SubArea{area(descripcion)}
+}
+
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination

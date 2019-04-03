@@ -1,0 +1,32 @@
+{
+    "name": "SubArea",
+    "fields": [
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 100
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "area",
+            "otherEntityRelationshipName": "subArea",
+            "relationshipName": "area",
+            "otherEntityField": "descripcion"
+        }
+    ],
+    "changelogDate": "20190402062413",
+    "entityTableName": "sub_area",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

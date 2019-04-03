@@ -1,0 +1,22 @@
+{
+    "generator-jhipster": {
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "site",
+        "clientFramework": "angularX",
+        "useSass": true,
+        "clientPackageManager": "npm",
+        "authenticationType": "jwt",
+        "cacheProvider": "no",
+        "databaseType": "sql",
+        "devDatabaseType": "sql",
+        "prodDatabaseType": "sql",
+        "testFrameworks": [],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [],
+        "enableTranslation": false,
+        "skipServer": true
+    }
+}

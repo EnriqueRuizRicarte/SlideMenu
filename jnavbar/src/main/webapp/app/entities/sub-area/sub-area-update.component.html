@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-sub-area-heading">Create or edit a Sub Area</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!subArea.id">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="subArea.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" for="field_descripcion">Descripcion</label>
+                    <input type="text" class="form-control" name="descripcion" id="field_descripcion"
+                        [(ngModel)]="subArea.descripcion" required maxlength="100"/>
+                    <div [hidden]="!(editForm.controls.descripcion?.dirty && editForm.controls.descripcion?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.descripcion?.errors?.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.descripcion?.errors?.maxlength">
+                        This field cannot be longer than 100 characters.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_area">Area</label>
+                    <select class="form-control" id="field_area" name="area" [(ngModel)]="subArea.areaId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="areaOption.id" *ngFor="let areaOption of areas; trackBy: trackAreaById">{{areaOption.descripcion}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+/* ==========================================================================
+Navbar
+========================================================================== */
+nav {
+    background-color: rgb(106, 170, 223) !important;
+}
+.navbar-title {
+    color: white;
+}
+/* Boton animado slideMenu*/
+.botonRow {
+    position:relative;
+    margin-left: 11%;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+}
+
+.iconoTamaño {
+    width: 60%;
+}
+
+
+.rotacionIzq {
+    animation: rotate .5s;
+    animation-name: rotate;
+    transform: rotate(180deg)
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(180deg);
+    }
+    0% {
+        transform: rotate(0deg);
+    }
+}
+
+
+.rotacionDer {
+    animation: rotate .5s;
+    animation-name: rotate2;
+    transform: rotate(0deg)
+}
+@keyframes rotate2 {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/*
+    User
+*/
+.imgPerfil {
+    width: 100%;
+    border: 1px solid lightblue;
+}
+.bloqueName {
+    width: 80%;
+    padding-right: 10px;
+}
+.contenedorIMG {
+  width: 20%;
+}
+.bloquePerfil {
+    padding:15px;
+    border-bottom: 2px solid lightgray;
+}
+
+/******/
+.navbar-version {
+    font-size: 0.65em;
+    color: $navbar-dark-color;
+}
+
+.profile-image {
+    height: 1.75em;
+    width: 1.75em;
+}
+
+.navbar {
+    /* Posicion Fija para slidenav*/
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    /**/
+    padding: 0.2rem 1rem;
+    .dropdown-item.active,
+    .dropdown-item.active:focus,
+    .dropdown-item.active:hover {
+        background-color: $dark;
+    }
+
+    ul.navbar-nav {
+        .nav-item {
+            margin-left: 0.5em;
+        }
+    }
+
+    a.nav-link {
+        font-weight: 400;
+    }
+
+    .navbar-toggler {
+        &:hover {
+            color: $navbar-dark-hover-color;
+        }
+    }
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.logo-img {
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../../../content/images/logo-jhipster.png') no-repeat center center;
+    background-size: contain;
+}
